@@ -140,6 +140,24 @@
                                     display: block;
                                     margin: 0 auto;
                                     top: -30px;"> </model-viewer> -->
+                            <img class="nadis_circle" src="img/nadis_circle.png" alt="">
+                            <script>
+                                var $spiro = $('.nadis_circle'),
+                                $body = $('body'),
+                                bodyHeight = $body.height();
+
+                                function getScrollTop() {
+                                    if (typeof pageYOffset != 'undefined') {
+                                        //most browsers except IE before #9
+                                        return pageYOffset;
+                                    } else {
+                                        var B = document.body; //IE 'quirks'
+                                        var D = document.documentElement; //IE with doctype
+                                        D = (D.clientHeight) ? D : B;
+                                        return D.scrollTop;
+                                    }
+                                }
+                            </script>
 
                             
 
