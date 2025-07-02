@@ -94,7 +94,55 @@
                         </div>
                         <div class="right_block">
 
-                            <img src="img/img5.png" alt="">
+                            <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+                            <model-viewer src="phone4.glb" camera-orbit="210deg 60deg auto"  
+                            min-camera-orbit="180deg 40deg auto"
+                            max-camera-orbit="210deg 90deg auto"
+                            ar ar-modes="webxr scene-viewer quick-look"
+                            camera-controls
+                            tone-mapping="neutral"
+                            poster="poster.webp"
+                            shadow-intensity="1"
+                            exposure="0.6"
+                            shadow-softness="1"
+                            style="width: 100%;
+                                    max-width: 800px;
+                                    height: 70%;
+                                    display: block;
+                                    margin: 0 auto;
+                                    top: -30px;"> </model-viewer>
+
+                            
+
+
+<script>
+  const modelViewer = document.getElementById('viewer');
+  let angle = 0;
+  let direction = 1;
+
+  const animate = () => {
+    // Увеличиваем или уменьшаем угол
+    angle += direction * 0.2;
+
+    // Проверяем пределы
+    if (angle > 45) {
+      direction = -1;
+      angle = 45;
+    } else if (angle < -45) {
+      direction = 1;
+      angle = -45;
+    }
+
+    // Устанавливаем камеру
+    modelViewer.cameraOrbit = `${angle}deg 0deg auto`;
+
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+</script>
+                            <!-- <img src="img/img5.png" alt=""> -->
                             
                             <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.37/build/spline-viewer.js"></script>
                             <spline-viewer hint loading-anim-type="none" url="https://prod.spline.design/LDJtRRqU2D7inNX3/scene.splinecode"></spline-viewer> -->
