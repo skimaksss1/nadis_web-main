@@ -12,6 +12,7 @@
         <!-- Скрипты не трогать -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -81,14 +82,14 @@
                     <div class="general_wrapper">
                         <div class="left_block">
                             <div class="top_block">
-                                <h1 class="">Nadis</h1>
-                                <p class="subtitle">Выгоднее, чем когда-либо!</p>
-                                <p class="description">Маркетплейс и скидочный сервис объединяющий сотни организаций по всему Казахстану, позволяющий экономить на привычных покупках.</p>
-                                <span class="download_btn">Скачать приложение:</span>
+                                <h1 class=""  data-aos="fade-right">Nadis</h1>
+                                <p class="subtitle"  data-aos="fade-right">Выгоднее, чем когда-либо!</p>
+                                <p class="description"  data-aos="fade-right">Маркетплейс и скидочный сервис объединяющий сотни организаций по всему Казахстану, позволяющий экономить на привычных покупках.</p>
+                                <span class="download_btn"  data-aos="fade-right">Скачать приложение:</span>
                                 
                                 <div class="market">
-                                    <a href=""><img src="img/Mobile app store badge.svg" alt=""></a>
-                                    <a href=""><img src="img/Mobile app store badge_2.svg" alt=""></a>
+                                    <a href="" data-aos="flip-up"><img src="img/Mobile app store badge.svg" alt=""></a>
+                                    <a href="" data-aos="flip-up" data-aos-delay="200"><img src="img/Mobile app store badge_2.svg" alt=""></a>
                                 </div>
                             </div> 
                         </div>
@@ -230,10 +231,10 @@
                             <!-- <div class="subtitleAbout element-hide-right element-animation">
                                 <hr><span class="subtitle">Большой выбор, быстрые доставки, безопасные сделки</span>
                             </div> -->
-                            <h2 class="">Ваш идеальный<br> маркетплейс и <br> скидочный сервис!</h2>
+                            <h2 class=""  data-aos="flip-up">Ваш идеальный<br> маркетплейс и <br> скидочный сервис!</h2>
                         </div>
                     </div>
-                    <div class="right_block">
+                    <div class="right_block" data-aos="fade-left">
                         <span class="about_description">Nadis — это современный подход к покупкам, платформа объединяющая удобство онлайн-шопинга и социальных сетей с широким ассортиментом товаров, услуг и конечно же скидок!</span>
                         <a href="about.html">
 
@@ -249,7 +250,7 @@
                     <h2>Почему NADIS?</h2>
                     <span class="why_description">«Nadis» предоставляет исключительно казахстанским компаниям инструменты для продаж, давая альтернативу вместо иностранных маркетплейсов, чья деятельность приводит к оттоку капитала из Казахстана. Мы проанализировали рынок и потребности клиентов, учли все ошибки и недочеты конкурентов и создали собственный продукт, который мы уверены завоюет популярность среди бизнеса и потребителей!</span>
                     <div class="why_cards">
-                        <div class="card">
+                        <div class="card" data-aos="flip-up">
                             <div class="card_icon" >
                                 <svg data-offset="90" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M39.0649 7.8125V42.1875C39.0649 44.7766 36.9665 46.875 34.3774 46.875H15.6274C13.0384 46.875 10.9399 44.7766 10.9399 42.1875V7.8125C10.9399 5.22344 13.0384 3.125 15.6274 3.125H34.3774C36.9665 3.125 39.0649 5.22344 39.0649 7.8125ZM21.0962 10.9375H28.9087C29.7712 10.9375 30.4712 10.2375 30.4712 9.375C30.4712 8.5125 29.7712 7.8125 28.9087 7.8125H21.0962C20.2337 7.8125 19.5337 8.5125 19.5337 9.375C19.5337 10.2375 20.2337 10.9375 21.0962 10.9375ZM20.5853 21.1437L20.3571 20.0063C20.1884 19.1609 19.3649 18.6109 18.5196 18.7797C17.6743 18.95 17.1243 19.7734 17.2931 20.6187C17.2931 20.6187 17.7743 23.0219 17.7774 23.0406L18.7712 28.0063C19.0634 29.4672 20.3462 30.5187 21.8353 30.5187H28.6478C30.1384 30.5187 31.4212 29.4672 31.7134 28.0063L32.7118 23.0125C32.804 22.5531 32.6837 22.0766 32.3884 21.7156C32.0915 21.3531 31.6478 21.1437 31.179 21.1437H20.5853ZM22.1165 32.0812C21.254 32.0812 20.554 32.7812 20.554 33.6437C20.554 34.5062 21.254 35.2062 22.1165 35.2062C22.979 35.2062 23.679 34.5062 23.679 33.6437C23.679 32.7812 22.979 32.0812 22.1165 32.0812ZM28.3665 32.0812C27.504 32.0812 26.804 32.7812 26.804 33.6437C26.804 34.5062 27.504 35.2062 28.3665 35.2062C29.229 35.2062 29.929 34.5062 29.929 33.6437C29.929 32.7812 29.229 32.0812 28.3665 32.0812Z" fill="white"/>
@@ -258,7 +259,7 @@
                             <h3 class="card_title">Удобство использования:</h3>
                             <span class="card_description">Nadis имеет удобный и интуитивно понятный интерфейс, который позволяет быстро и легко находить нужные товары и совершать покупки.</span>
                         </div>
-                        <div class="card">
+                        <div class="card" data-aos="flip-up">
                             <div class="card_icon">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.5313 32.4375C15.1042 34.3437 13.5417 37.3021 13.5417 40.625V43.75H7.29175C5.56258 43.75 4.16675 42.3542 4.16675 40.625V38.5417C4.16675 34.5104 7.42716 31.25 11.4584 31.25H13.5417C15.0209 31.25 16.3855 31.6875 17.5313 32.4375Z" fill="white"/>
@@ -277,7 +278,7 @@
                             <span class="card_description">Nadis соединяет вас с живой аудиторией. Никаких ботов, никаких накруток — только реальные люди и честное взаимодействие.
                             </span>
                         </div>
-                        <div class="card">
+                        <div class="card" data-aos="flip-up">
                             <div class="card_icon">
                                 <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.7959 16.5303H47.5459V13.3188C47.5459 12.0933 47.0484 10.9168 46.1574 10.0498C45.2819 9.19877 44.0964 8.71777 42.8584 8.71777H8.4834C7.2454 8.71777 6.0599 9.19877 5.1844 10.0498C4.2934 10.9168 3.7959 12.0933 3.7959 13.3188V16.5303Z" fill="white"/>
@@ -288,7 +289,7 @@
                             <h3 class="card_title">Безопасность платежей:</h3>
                             <span class="card_description">Nadis использует безопасные способы оплаты, что обеспечивает защиту данных покупателей и сохранность их средств.</span>
                         </div>
-                        <div class="card">
+                        <div class="card" data-aos="flip-up">
                             <div class="card_icon">
                                 <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_548_1529)">
@@ -323,7 +324,7 @@
                     <h2>ВЫГОДНОЕ РЕШЕНИЕ ДЛЯ Каждого</h2>
                     <span class="foreach_description">Покупатели получают доступ к широкому ассортименту товаров и услуг с возможностью возврата части средств через кэшбек-программы и скидки, а продавцы - эффективные инструменты продвижения, гарантированную работу с реальной аудиторией и детализированной аналитикой. Платформа обеспечивает прозрачную и эффективную бизнес-среду для всех!</span>
                     <div class="fors">
-                        <div class="forUsers ">
+                        <div class="forUsers "  data-aos="fade-right">
                             <div class="photo">
                                 <img src="img/img1.png" alt="">
                             </div>
@@ -7509,5 +7510,9 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     </body>
 </html>
