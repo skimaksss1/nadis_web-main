@@ -240,6 +240,9 @@
             }
         }
     }
+    .block_card .header_content .header_flex .text_header{
+        text-align: center;
+    }
     .block_card .header_content .header_flex .hedaer_card{
         width: 100%;
         padding: 40px;
@@ -252,7 +255,8 @@
     }
     .hedaer_txt, ul{
         width: 100% !important;
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
     }
     .m0a{
         margin: 0 auto;
@@ -312,6 +316,13 @@
             width: 280px !important;
             justify-content: center;
         }
+    }
+    .general_block .market{
+        justify-content: center;
+    }
+    .block_card .header_content .header_flex .text_body{
+        text-align: justify;
+        text-align-last: center;
     }
 }
 @media (max-width: 1100px) {
@@ -434,6 +445,17 @@
             }
         }
     }
+    .block_card .header_content .header_flex .hedaer_card{
+        background-color: transparent;
+        text-align: justify;
+        text-align-last: center;
+        width: 100% !important;
+    }
+    .block_card .header_content .header_flex .text_body{
+        text-align: justify;
+        text-align-last: center;
+
+    }
     .whyNadis {
         .whyNadis_wrapper{
             padding: 40px 20px;
@@ -443,6 +465,8 @@
             .why_description{
                 padding: 0;
                 font-size: 14px;
+                text-align: justify;
+                text-align-last: center;
             }
             .why_cards{
                 flex-direction: column;
@@ -647,7 +671,8 @@
         }
         .bonus_text{
             font-size: 14px !important;
-            text-align: center !important;
+            text-align: justify !important;
+            text-align-last: center;
             margin-top: 10px;
         }
     }
@@ -723,7 +748,8 @@
     }
     .about .about_wrapper .right_block .about_description{
         font-size: 20px;
-        text-align: center;
+        text-align: justify ;
+        text-align-last: center;
         padding-right: 0;
     }
     .about .about_wrapper .left_block .top_block .subtitleAbout hr{
@@ -821,6 +847,9 @@
                     }
                     h2{
                         font-size: 28px;
+                        br{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -831,6 +860,18 @@
                 text-align: center;
             }
         }
+    }
+    .foreach .foreach_wrapper .foreach_description{
+        text-align: justify;
+        text-align-last: center;
+    }
+    .foreach .foreach_wrapper .fors .forUsers .text .text_body, .foreach .foreach_wrapper .fors .forPartners .text .text_body, .foreach .foreach_wrapper .fors .forEntrepreneurs .text .text_body{
+        text-align: justify;
+        text-align-last: center;
+    }
+    .bonus_right .bonus_text{
+        text-align: justify !important;
+        text-align-last: center;
     }
     .whyNadis {
         .whyNadis_wrapper{

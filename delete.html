@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet/less" type="text/less" href="common.less" />
-        <title>Document</title>
+        <title>Nadis - Удалить аккаунт</title>
         <link rel="stylesheet/less" type="text/less" href="style.less" />
         <link rel="stylesheet/less" type="text/less" href="media.less" />
+        <link rel="icon" type="image/png" href="img//favicon.png" />
         <!-- Скрипты не трогать -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <div class="scroll_up">
@@ -18,7 +20,7 @@
                 <img src="img/page_up.png" alt="" srcset="">
             </a>
         </div>   
-        <div class="general autoheight ">
+        <div class="general autoheight empty_bg">
             <div class="main">
                 <div class="container">
                     <div class="nav">
@@ -26,21 +28,26 @@
                             <div class="logo">
                                 <a href="index.html">
                                     <img src="img/real.svg" alt="">
-                                    <span>NADIS</span>
+                                    <span>Nadis</span>
                                 </a>
                             </div>
                             <ul>
-                                    <a href="foruser.html">
-                                        <li>Пользователям</li>
-                                    </a><a href="forcompany.html">
-                                        <li>Компаниям</li>
-                                    </a><a href="association.html">
-                                        <li>Ассоциации предпринимателей</li>
-                                    </a>
-                                </ul>
+                                <a href="about.html" class="hover_title">
+                                    <li>О компании</li>
+                                </a>
+                                <a href="foruser.html" class="hover_title">
+                                    <li>Пользователям</li>
+                                </a>
+                                <a href="forcompany.html" class="hover_title">
+                                    <li>Партнерам</li>
+                                </a>
+                                <a href="association.html" class="hover_title">
+                                    <li>Ассоциация предпринимателей</li>
+                                </a>
+                            </ul>
                         </div>
                         <button class="btn-type2">Скачать приложение</button>
-                        <div class="right_content">
+                        <div class="right_content main-btn">
                             <div class="open_close-btn">
                                 <div class="line"></div>
                                 <div class="line short_line"></div>
@@ -51,70 +58,49 @@
                                     <a href="foruser.html">
                                         <li>Пользователям</li>
                                     </a><a href="forcompany.html">
-                                        <li>Компаниям</li>
+                                        <li>Партнерам</li>
                                     </a><a href="association.html">
                                         <li>Ассоциации предпринимателей</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Контакты</li>
                                     </a>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
-            <div class="general_block additional">
+            <div class="general_block additiona ">
                 <div class="container">
-                    <div class="general_wrapper">
-                        <div class="back">
-                            <a href="index.html">
-                                <img src="img/backpage.svg" alt=""> 
-                            </a>
-                            <div class="title" style="
-                                text-align: center;
-                                    font-size: 26px;
-                                font-weight: 700;
-                                text-transform: uppercase;
-                                display: none;
-                                color: #E7FE55;
-                                position: relative;
-                                left: calc(50% - 48px);">
-                                Nadis
-                            </div>
-                        </div>
-                        <div class="center_content" style=" padding-top: 0;
-                        position: relative;
-                        top: -26px;">
-                            <h2 style="color: #E7FE55;    padding-left: 60px;">Nadis</h2>
-                            <p>
-                                Nadis – скидочный сервис объединяющий сотни организаций по всему Казахстану, позволяющий экономить на привычных покупках.
-                            </p>
-                            <h2 style="color: #E7FE55;     margin-top: 30px;">Цель Nadis</h2>
-                            <p>Цель Nadis максимально сократить путь клиента от полученной информации, до совершения покупки не только по средствам актуальности горячих предложений, но так же по средствам мотивации и возможности дополнительного заработка от реферальной бонусной программы, что позволит пользователю по достоинству оценить все плюсы приложения, соответственно сделать его неотъемлемой частью повседневной жизни, а компаниям оптимизировать бюджеты на привлечение новых клиентов.
-                                <br><br>
-                                Мы ставим перед собой вполне конкретные цели и планируем подключить к Nadis более 6000 организаций из 21 города Казахстана.</p>
-                            <h3>Платформы</h3>
-                            <p>Все возможности сервиса Nadis доступны только в мобильных приложениях. Это сделано в целях безопасности Ваших личных данных и удобства использования.
-                                <br><br>
-                                Для Вашего удобства мобильные приложения Nadis разработаны на платформы Android и Apple iOS в котором можно будет
-                                просматривать все интересующие Вас
-                                организации через удобный рубрикатор
-                                категорий товаров и услуг, сортировать
-                                список организаций по городам, а также
-                                просматривать их горячие предложения в
-                                ленте новостей.
-                                <br><br>
-                                Также, для получения информации незарегистрированным пользователям доступен веб-сайт nadis.kz
-                            </p>
-                            <br>
-                            <button class="btn-type1">Скачать приложение</button>
-                                <div class="market">
-                                    <a href=""><img src="img/googleplay.png" alt=""></a>
-                                    <a href=""><img src="img/appstore.png" alt=""></a>
+                    <div class="block_card">
+                        <div class="header_content general_card" style="padding: 0 60px;">
+                            <img class="header_imgBg" src="img/dots.png" alt="" class="img_bg">
+                            <div class="header_flex">
+                                <div class="hedaer_card" style="width: 60%;"  data-aos="fade-right">
+                                    <span class="text_header">Уважаемый пользователь!</span>
+                                    <span class="text_body " style="text-align: justify;">
+                                        Для удаления аккаунта Вам необходимо написать на электронный адрес службы поддержки Nadis: <a href="mailto:support@nadis.kz">support@nadis.kz</a> 
+                                        <br><br> 
+                                        В письме нужно указать Ваш логин, Ф.И.О., контактные данные. Удаление аккаунта требует подтверждения заявки в приложении Nadis. 
+                                        <br> <br> 
+                                        Заявка обрабатывается в течении 14 календарных дней.
+                                    </span>                                
+                                    <!-- <span class="download_btn">Скачать приложение:</span>
+                                    <div class="market">
+                                        <a href=""><img src="img/Mobile app store badge.svg" alt=""></a>
+                                        <a href=""><img src="img/Mobile app store badge_2.svg" alt=""></a>
+                                    </div> -->
                                 </div>
+                                <img class="hedaerPageImg" src="img/img5.png" alt="" style="width: 40%;">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="footer">
             <div class="container">
                 <div class="wrapper">
@@ -122,10 +108,11 @@
                         <div class="logo">
                             <a href="index.html">
                                 <img src="img/real.svg" alt="">
-                                <span>NADIS</span>
+                                <span>Nadis</span>
                             </a>
                         </div>
-                        <span class="age">Nadis Application 2023</span>
+                        <span class="age">ЧК «Nadis Group Limited»</span>
+                        <span class="age">© Все права защищинеы</span>
                         <a href=""><span class="politic">Политика конфиденциальности</span></a>
                         <a href="delete.html" style="   display: block;
                                                         text-decoration: underline;
@@ -133,22 +120,26 @@
                                                         padding-top: 5px;">Удалить аккаунт</a>
                     </div>
                     <div class="center_block">
-                                <ul>
-                                    <a href="foruser.html">
-                                        <li>Пользователям</li>
-                                    </a><a href="forcompany.html">
-                                        <li>Партнерам</li>
-                                    </a><a href="association.html">
-                                        <li>Ассоцияция предпринимателей</li>
-                                    </a><a href="#">
-                                        <li>Карьера</li>
-                                    </a>
-                                </ul>
+                        <ul>
+                            <a href="about.html" class="hover_title">
+                                <li>О компании</li>
+                            </a>
+                            <a href="foruser.html" class="hover_title">
+                                <li>Пользователям</li>
+                            </a>
+                            <a href="forcompany.html" class="hover_title">
+                                <li>Партнерам</li>
+                            </a>
+                            <a href="association.html" class="hover_title">
+                                <li>Ассоциация предпринимателей</li>
+                            </a>
+                            
+                        </ul>
                     </div>
                     <div class="right_block">
-                        <button class="btn-type2">Скачать приложение</button>
-                        <img style="width: 125px;" src="img/googleplay.png" alt="">
-                        <img style="width: 125px;" src="img/appstore.png" alt="">
+                        Скачать приложение:
+                        <img style="width: 125px;" src="img/Mobile app store badge.svg" alt="">
+                        <img style="width: 125px;" src="img/Mobile app store badge_2.svg" alt="">
                     </div>
                 </div>
                 <hr>
@@ -174,5 +165,9 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>   
     </body>
 </html>

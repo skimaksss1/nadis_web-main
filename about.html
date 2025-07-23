@@ -12,6 +12,7 @@
         <!-- Скрипты не трогать -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <div class="scroll_up">
@@ -77,7 +78,7 @@
                         <div class="header_content general_card" style="padding: 0 60px;">
                             <img class="header_imgBg" src="img/dots.png" alt="" class="img_bg">
                             <div class="header_flex">
-                                <div class="hedaer_card" style="width: 60%;">
+                                <div class="hedaer_card" style="width: 60%;"  data-aos="fade-right">
                                     <span class="text_header">Nadis</span>
                                     <span class="text_body ">
                                         Оператором маркетплейса Nadis в Республике Казахстан является Частная компания “Nadis Group Limited” зарегистрированная в юрисдикции международного финансового центра Астана (МЦФА) 27 декабря 2023 года.
@@ -93,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="block_card">
+                    <div class="block_card" data-aos="fade-right">
                         <div class="header_content">
                             <img class="header_imgBg" src="img/dots.png" alt="" class="img_bg">
                             <div class="header_flex">
@@ -114,7 +115,7 @@
     
                         </div>
                     </div>
-                    <div class="block_card">
+                    <div class="block_card" data-aos="fade-right">
                         <div class="header_content general_card">
                             <img class="header_imgBg" src="img/dots.png" alt="" class="img_bg">
                             <div class="about_info">
@@ -123,7 +124,7 @@
                                     <div class="left">Адрес:</div>
                                     <div class="right">Республика Казахстан, г.Астана</div>
                                     <div class="left">Телефон:</div>
-                                    <div class="right">+7 707 589 63 04</div>
+                                    <div class="right">+7 777 985 19 43</div>
                                     <div class="left">Email:</div>
                                     <div class="right">info@nadis.kz</div>
                                     <div class="left">По вопросам трудоустройства:</div>
@@ -163,7 +164,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="bonus">
+                    <div class="bonus" data-aos="fade-down">
                         <div class="bonus_content" style="margin-top: 50px;">
                             <img class="bonus_imgBg" src="img/dots.png" alt="" class="img_bg">
                             <div class="bonus_flex">
@@ -7222,6 +7223,10 @@
                         <span class="age">ЧК «Nadis Group Limited»</span>
                         <span class="age">© Все права защищинеы</span>
                         <a href=""><span class="politic">Политика конфиденциальности</span></a>
+                        <a href="delete.html" style="   display: block;
+                                                        text-decoration: underline;
+                                                        color: #7e7e7e;
+                                                        padding-top: 5px;">Удалить аккаунт</a>
                     </div>
                     <div class="center_block">
                         <ul>
@@ -7269,5 +7274,9 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>   
     </body>
 </html>
