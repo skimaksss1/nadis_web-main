@@ -1,4 +1,4 @@
-    .header-actions {
+.header-actions {
         display: flex;
         align-items: center;
         gap: 16px;
@@ -59,14 +59,12 @@
                     gap: 30px;
                     margin-left: 40px;
 
-                    a {
                         li {
                             list-style: none;
                             font-size: 14px;
                             font-weight: 500;
                             text-transform: uppercase;
                         }
-                    }
                 }
             }
 
@@ -1684,9 +1682,9 @@
                     animation-delay: 1s;
                 }
                 @keyframes tcard1 {
-                    0%{
+                    0% {
                     }
-                    100%{
+                    100% {
                         top: -20px;
                         transform: scaleY(1);
                     }
@@ -1696,9 +1694,9 @@
                     animation-delay: 2s;
                 }
                 @keyframes tcard2 {
-                    0%{
+                    0% {
                     }
-                    100%{
+                    100% {
                         top: -20px;
                         transform: scaleY(1);
                     }
@@ -1708,9 +1706,9 @@
                     animation-delay: 3s;
                 }
                 @keyframes tcard3 {
-                    0%{
+                    0% {
                     }
-                    100%{
+                    100% {
                         top: -20px;
                         transform: scaleY(1);
                     }
@@ -1720,9 +1718,9 @@
                     animation-delay: 4s;
                 }
                 @keyframes tcard4 {
-                    0%{
+                    0% {
                     }
-                    100%{
+                    100% {
                         top: -20px;
                         transform: scaleY(1);
                     }
@@ -1732,9 +1730,9 @@
                     animation-delay: 5s;
                 }
                 @keyframes tcard5 {
-                    0%{
+                    0% {
                     }
-                    100%{
+                    100% {
                         top: -20px;
                         transform: scaleY(1);
                     }
@@ -2283,16 +2281,18 @@
         width: 100%;
     }
 }
-
+.nav-active-yellow {
+  color: #E7FE55 !important; /* bright yellow */
+}
 .hover_title{
     transition: 0.5s all ease;
     cursor: pointer;
 }
-.hover_title:hover{
+.hover_title:hover a{
     transition: 0.5s all ease;
     color: #E7FE55 !important;
 }
-.active_title{
+.active_title a{
     color: #E7FE55 !important;
 }
 .fishki{
