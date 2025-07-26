@@ -360,7 +360,7 @@
                                                 </div>
                                             </div>
                                             <div class="right">
-                                                <span class="people_count">3905</span>
+                                                <span class="people_count number" data-target="3905">0</span>
                                                 <span class="text">человек</span>
                                                 <spak class="me">5+25+125+625+3125</spak>
                                             </div>
@@ -372,7 +372,7 @@
                                                 </div>
                                             </div>
                                             <div class="right">
-                                                <span class="people_count">5 467 000 </span>
+                                                <span class="people_count number" data-target="5467000">0</span>
                                                 <span class="text">вознаграждение</span>
                                                 <spak class="me">3 905*1400</spak>
                                             </div>
@@ -722,9 +722,62 @@
     </script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-        AOS.init();
-    </script> 
+    AOS.init();
+    // Growing numbers animation
+    function animateNumber(el, target, duration = 2000) {
+        let start = 0;
+        let startTime = null;
+        // Берём значение из data-target, если есть
+        if (el.dataset.target) {
+            target = parseInt(el.dataset.target.replace(/\D/g, ''));
+        } else {
+            target = parseInt(target.replace(/\D/g, ''));
+        }
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let progress = Math.min((timestamp - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * target).toLocaleString() + (el.dataset.plus ? el.dataset.plus : '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                el.textContent = target.toLocaleString() + (el.dataset.plus ? el.dataset.plus : '');
+            }
+        }
+        window.requestAnimationFrame(step);
+    }
+
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight &&
+            rect.bottom > 0
+        );
+    }
+
+    function handleNumbers() {
+        document.querySelectorAll('.number').forEach(function(el) {
+            if (!el.classList.contains('animated') && isInViewport(el)) {
+                el.classList.add('animated');
+                let plus = '';
+                // Если в data-target есть +, добавим его
+                if (el.dataset.target && el.dataset.target.trim().endsWith('+')) {
+                    plus = '+';
+                } else if (el.textContent.trim().endsWith('+')) {
+                    plus = '+';
+                }
+                el.dataset.plus = plus;
+                setTimeout(function() {
+                    animateNumber(el, el.dataset.target || el.textContent.trim(), 1500);
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleNumbers);
+    window.addEventListener('DOMContentLoaded', handleNumbers);
+    </script>
 </body>
 
 </html>
