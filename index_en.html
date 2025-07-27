@@ -5,20 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet/less" type="text/less" href="common.less" />
-        <title>Маркетпейс - Nadis</title>
+        <title>Marketplace - Nadis</title>
         <link rel="stylesheet/less" type="text/less" href="style.less" />
         <link rel="stylesheet/less" type="text/less" href="media.less" />
-        <link rel="icon" type="image/png" href="img//favicon.png" />
-        <!-- Скрипты не трогать -->
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <!-- Do not touch scripts -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <!-- <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     </head>
     <body>
         <div class="general" id="general">
@@ -27,23 +21,23 @@
                     <div class="nav">
                         <div class="left_content">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index_en.html">
                                     <img src="img/real.svg" alt="">
                                     <span>Nadis</span>
                                 </a>
                             </div>
                             <ul>
-                                <li><a href="about.html" class="hover_title">О компании</a></li>
-                                <li><a href="foruser.html" class="hover_title">Пользователям</a></li>
-                                <li><a href="forcompany.html" class="hover_title">Партнерам</a></li>
-                                <li><a href="association.html" class="hover_title">Ассоциация предпринимателей</a></li>
+                                <li><a href="about_en.html" class="hover_title">About the Company</a></li>
+                                <li><a href="foruser_en.html" class="hover_title">For Users</a></li>
+                                <li><a href="forcompany_en.html" class="hover_title">For Partners</a></li>
+                                <li><a href="about_en.html" class="hover_title">Entrepreneurs Association</a></li>
                             </ul>
-                        <!-- Языковой выпадающий список будет перемещён ниже -->
+                        <!-- Language dropdown will be moved below -->
                         </div>
 
                         <div class="header-actions">
                             <div class="mrkt_btns" style="position: relative; z-index: 100;">
-                                <button class="btn-type2 mrkt">Скачать приложение</button>
+                                <button class="btn-type2 mrkt">download app</button>
                                 <div class="market_btn" style=" display: flex;
                                                                 flex-direction: column;
                                                                 align-items: end;
@@ -56,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="custom-language-dropdown">
-                                <div class="custom-language-selected" id="selected-lang">RU</div>
+                                <div class="custom-language-selected" id="selected-lang">EN</div>
                                 <ul class="custom-language-list" id="lang-list">
                                     <li data-value="ru"><a href="index.html">RU</a></li>
                                     <li data-value="en"><a href="index_en.html">EN</a></li>
@@ -73,10 +67,10 @@
                             </div>
                             <div class="mobile_main hide">
                                 <ul>
-                                    <li><a href="about.html">О Компании</a></li>
-                                    <li><a href="foruser.html">Пользователям</a></li>
-                                    <li><a href="forcompany.html">Партнерам</a></li>
-                                    <li><a href="association.html">Ассоциации предпринимателей</a></li>
+                                    <li><a href="about_en.html">About the Company</a></li>
+                                    <li><a href="foruser_en.html">For Users</a></li>
+                                    <li><a href="forcompany_en.html">For Partners</a></li>
+                                    <li><a href="association_en.html">Entrepreneurs Association</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -88,10 +82,10 @@
                     <div class="general_wrapper">
                         <div class="left_block">
                             <div class="top_block">
-                                <h1 class=""  data-aos="fade-right">Nadis</h1>
-                                <p class="subtitle"  data-aos="fade-right">Выгоднее, чем когда-либо!</p>
-                                <p class="description"  data-aos="fade-right">Маркетплейс и скидочный сервис объединяющий сотни организаций по всему Казахстану, позволяющий экономить на привычных покупках.</p>
-                                <span class="download_btn"  data-aos="fade-right">Скачать приложение:</span>
+                                <h1 class="" data-aos="fade-right">Nadis</h1>
+                                <p class="subtitle" data-aos="fade-right">More Profitable Than Ever!</p>
+                                <p class="description" data-aos="fade-right">A marketplace and discount service uniting hundreds of organizations across Kazakhstan, enabling savings on everyday purchases.</p>
+                                <span class="download_btn" data-aos="fade-right">Download app:</span>
                                 
                                 <div class="market">
                                     <a href="" data-aos="flip-up"><img src="img/Mobile app store badge.svg" alt=""></a>
@@ -112,7 +106,7 @@
                             shadow-intensity="1"
                             exposure="0.6"
                             shadow-softness="1"
-                              disable-zoom
+                            disable-zoom
                             style="width: 100%;
                                     max-width: 900px;
                                     height: 73%;
@@ -165,63 +159,32 @@
                                 }
                             </script>
 
-                            
+                            <script>
+                                const modelViewer = document.getElementById('viewer');
+                                let angle = 0;
+                                let direction = 1;
 
+                                const animate = () => {
+                                    // Increase or decrease angle
+                                    angle += direction * 0.2;
 
-<script>
-  const modelViewer = document.getElementById('viewer');
-  let angle = 0;
-  let direction = 1;
+                                    // Check limits
+                                    if (angle > 45) {
+                                        direction = -1;
+                                        angle = 45;
+                                    } else if (angle < -45) {
+                                        direction = 1;
+                                        angle = -45;
+                                    }
 
-  const animate = () => {
-    // Увеличиваем или уменьшаем угол
-    angle += direction * 0.2;
+                                    // Set camera
+                                    modelViewer.cameraOrbit = `${angle}deg 0deg auto`;
 
-    // Проверяем пределы
-    if (angle > 45) {
-      direction = -1;
-      angle = 45;
-    } else if (angle < -45) {
-      direction = 1;
-      angle = -45;
-    }
+                                    requestAnimationFrame(animate);
+                                };
 
-    // Устанавливаем камеру
-    modelViewer.cameraOrbit = `${angle}deg 0deg auto`;
-
-    requestAnimationFrame(animate);
-  };
-
-  animate();
-</script>
-                            <!-- <img src="img/img5.png" alt=""> -->
-                            
-                            <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.37/build/spline-viewer.js"></script>
-                            <spline-viewer hint loading-anim-type="none" url="https://prod.spline.design/LDJtRRqU2D7inNX3/scene.splinecode"></spline-viewer> -->
-
-
-                            
-                            
-                            
-                            
-                            <!-- <div id="phone" class="container">
-                                <phone id="phone-1" data-image="img/XgbRIKE.png">
-                                    <img src="img/app.png" alt="">
-                                </phone>
-                                
-                                <phone data-image="https://imgur.com/fL3OMY0.png">
-                                </phone>
-                            </div>
-                            
-                            <video data-v-3086b8b1="" autoplay="autoplay" muted="muted" loop="loop" id="background-video"><source data-v-3086b8b1="" src="http://upcomers.com/video.mp4" type="video/mp4" autoplay="autoplay"></video> -->
-                            
-                            
-                            <!-- <img class="basket_img" src="img/basket.png" alt="">
-                            <div class="rectangle_place"></div>
-                            <img class="app_img" src="img/app2.png" alt=""> -->
-                            <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.37/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/Jo5ICaio21hKUexi/scene.splinecode"></spline-viewer>
-                            <img class="nadis_circle" src="img/nadis_circle.png" alt=""> -->
+                                animate();
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -231,19 +194,14 @@
             <div class="container">
                 <div class="about_wrapper">
                     <div class="left_block">
-                        <!-- <img class="realBubble" src="img/realBubble.png" alt="" > -->
                         <div class="top_block">
-                            <!-- <div class="subtitleAbout element-hide-right element-animation">
-                                <hr><span class="subtitle">Большой выбор, быстрые доставки, безопасные сделки</span>
-                            </div> -->
-                            <h2 class=""  data-aos="flip-up">Ваш идеальный<br> маркетплейс и <br> скидочный сервис!</h2>
+                            <h2 class="" data-aos="flip-up">Your Ideal<br> Marketplace and <br> Discount Service!</h2>
                         </div>
                     </div>
                     <div class="right_block" data-aos="fade-left">
-                        <span class="about_description">Nadis — это современный подход к покупкам, платформа объединяющая удобство онлайн-шопинга и социальных сетей с широким ассортиментом товаров, услуг и конечно же скидок!</span>
+                        <span class="about_description">Nadis is a modern approach to shopping, a platform combining the convenience of online shopping and social media with a wide range of products, services, and, of course, discounts!</span>
                         <a href="about.html">
-
-                            <button class="btn-type2">Подробнее о нас</button>
+                            <button class="btn-type2">Learn More About Us</button>
                         </a>
                     </div>
                 </div>
@@ -252,8 +210,8 @@
         <div class="whyNadis" id="whyNadis">
             <div class="container">
                 <div class="whyNadis_wrapper">
-                    <h2>Почему NADIS?</h2>
-                    <span class="why_description">«Nadis» предоставляет исключительно казахстанским компаниям инструменты для продаж, давая альтернативу вместо иностранных маркетплейсов, чья деятельность приводит к оттоку капитала из Казахстана. Мы проанализировали рынок и потребности клиентов, учли все ошибки и недочеты конкурентов и создали собственный продукт, который мы уверены завоюет популярность среди бизнеса и потребителей!</span>
+                    <h2>Why NADIS?</h2>
+                    <span class="why_description">“Nadis” provides exclusively Kazakhstani companies with tools for sales, offering an alternative to foreign marketplaces whose activities lead to capital outflow from Kazakhstan. We analyzed the market and customer needs, considered competitors' mistakes and shortcomings, and created our own product, which we are confident will gain popularity among businesses and consumers!</span>
                     <div class="why_cards">
                         <div class="card" data-aos="flip-up">
                             <div class="card_icon" >
@@ -261,8 +219,8 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M39.0649 7.8125V42.1875C39.0649 44.7766 36.9665 46.875 34.3774 46.875H15.6274C13.0384 46.875 10.9399 44.7766 10.9399 42.1875V7.8125C10.9399 5.22344 13.0384 3.125 15.6274 3.125H34.3774C36.9665 3.125 39.0649 5.22344 39.0649 7.8125ZM21.0962 10.9375H28.9087C29.7712 10.9375 30.4712 10.2375 30.4712 9.375C30.4712 8.5125 29.7712 7.8125 28.9087 7.8125H21.0962C20.2337 7.8125 19.5337 8.5125 19.5337 9.375C19.5337 10.2375 20.2337 10.9375 21.0962 10.9375ZM20.5853 21.1437L20.3571 20.0063C20.1884 19.1609 19.3649 18.6109 18.5196 18.7797C17.6743 18.95 17.1243 19.7734 17.2931 20.6187C17.2931 20.6187 17.7743 23.0219 17.7774 23.0406L18.7712 28.0063C19.0634 29.4672 20.3462 30.5187 21.8353 30.5187H28.6478C30.1384 30.5187 31.4212 29.4672 31.7134 28.0063L32.7118 23.0125C32.804 22.5531 32.6837 22.0766 32.3884 21.7156C32.0915 21.3531 31.6478 21.1437 31.179 21.1437H20.5853ZM22.1165 32.0812C21.254 32.0812 20.554 32.7812 20.554 33.6437C20.554 34.5062 21.254 35.2062 22.1165 35.2062C22.979 35.2062 23.679 34.5062 23.679 33.6437C23.679 32.7812 22.979 32.0812 22.1165 32.0812ZM28.3665 32.0812C27.504 32.0812 26.804 32.7812 26.804 33.6437C26.804 34.5062 27.504 35.2062 28.3665 35.2062C29.229 35.2062 29.929 34.5062 29.929 33.6437C29.929 32.7812 29.229 32.0812 28.3665 32.0812Z" fill="white"/>
                                 </svg>                                
                             </div>
-                            <h3 class="card_title">Удобство использования:</h3>
-                            <span class="card_description">Nadis имеет удобный и интуитивно понятный интерфейс, который позволяет быстро и легко находить нужные товары и совершать покупки.</span>
+                            <h3 class="card_title">Ease of Use:</h3>
+                            <span class="card_description">Nadis has a user-friendly and intuitive interface that allows you to quickly and easily find the desired products and make purchases.</span>
                         </div>
                         <div class="card" data-aos="flip-up">
                             <div class="card_icon">
@@ -279,9 +237,8 @@
                                 </svg>
                                       
                             </div>
-                            <h3 class="card_title">Целевая аудитория:</h3>
-                            <span class="card_description">Nadis соединяет вас с живой аудиторией. Никаких ботов, никаких накруток — только реальные люди и честное взаимодействие.
-                            </span>
+                            <h3 class="card_title">Target Audience:</h3>
+                            <span class="card_description">Nadis connects you with a live audience. No bots, no fake engagement — only real people and honest interaction.</span>
                         </div>
                         <div class="card" data-aos="flip-up">
                             <div class="card_icon">
@@ -291,8 +248,8 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M25.7043 22.5513L25.6703 22.5508C25.4863 22.5503 25.3023 22.5853 25.1288 22.6548C25.1288 22.6548 20.3938 24.5568 18.3593 25.4713C17.5628 25.8293 17.0748 26.1728 16.9888 26.2668C16.4803 26.8243 16.1863 27.5768 16.1863 28.3648V34.2993C16.1863 37.0648 17.4213 39.6528 19.4748 41.2608C21.0028 42.4573 22.8023 43.8663 23.8323 44.6733C24.3478 45.0768 24.9523 45.2803 25.5568 45.2823H25.5853C26.1803 45.2778 26.7748 45.0788 27.2848 44.6853C28.3288 43.8788 30.1603 42.4643 31.7148 41.2638C33.7928 39.6593 35.0458 37.0553 35.0458 34.2693V28.3648C35.0458 27.5768 34.7518 26.8243 34.2433 26.2668C34.1573 26.1728 33.6753 25.8323 32.8898 25.4743C30.8813 24.5598 26.2108 22.6573 26.2108 22.6573C26.0483 22.5913 25.8768 22.5558 25.7043 22.5513ZM21.4223 35.4058L24.5018 38.0318C24.8323 38.3138 25.2658 38.4453 25.6973 38.3948C26.1288 38.3443 26.5198 38.1163 26.7763 37.7658L30.5303 32.6403C31.0398 31.9443 30.8883 30.9658 30.1928 30.4563C29.4968 29.9468 28.5183 30.0983 28.0088 30.7938L25.2493 34.5623L23.4498 33.0283C22.7938 32.4683 21.8068 32.5468 21.2473 33.2033C20.6878 33.8593 20.7663 34.8463 21.4223 35.4058Z" fill="white"/>
                                 </svg>                                
                             </div>
-                            <h3 class="card_title">Безопасность платежей:</h3>
-                            <span class="card_description">Nadis использует безопасные способы оплаты, что обеспечивает защиту данных покупателей и сохранность их средств.</span>
+                            <h3 class="card_title">Payment Security:</h3>
+                            <span class="card_description">Nadis uses secure payment methods, ensuring the protection of buyers' data and the safety of their funds.</span>
                         </div>
                         <div class="card" data-aos="flip-up">
                             <div class="card_icon">
@@ -316,8 +273,8 @@
                                 </svg>                                    
                                     
                             </div>
-                            <h3 class="card_title">Бизнес и реклама:</h3>
-                            <span class="card_description">Пользователи могут участвовать в продвижении Nadis и получать за это кэшбек! Мы поощряем тех, кто помогает нам расти!</span>
+                            <h3 class="card_title">Business and Advertising:</h3>
+                            <span class="card_description">Users can participate in promoting Nadis and receive cashback for it! We reward those who help us grow!</span>
                         </div>
                     </div>
                 </div>
@@ -326,73 +283,72 @@
         <div class="foreach">
             <div class="container">
                 <div class="foreach_wrapper">
-                    <h2>ВЫГОДНОЕ РЕШЕНИЕ ДЛЯ Каждого</h2>
-                    <span class="foreach_description">Покупатели получают доступ к широкому ассортименту товаров и услуг с возможностью возврата части средств через кэшбек-программы и скидки, а продавцы - эффективные инструменты продвижения, гарантированную работу с реальной аудиторией и детализированной аналитикой. Платформа обеспечивает прозрачную и эффективную бизнес-среду для всех!</span>
+                    <h2>PROFITABLE SOLUTION FOR EVERYONE</h2>
+                    <span class="foreach_description">Buyers gain access to a wide range of products and services with the opportunity to receive cashback and discounts, while sellers get effective promotion tools, guaranteed engagement with a real audience, and detailed analytics. The platform ensures a transparent and efficient business environment for all!</span>
                     <div class="fors">
-                        <div class="forUsers "  data-aos="fade-right">
+                        <div class="forUsers " data-aos="fade-right">
                             <div class="photo">
                                 <img src="img/img1.png" alt="">
                             </div>
                             <div class="text right_line">
-                                <span class="text_header">Пользователям</span>
+                                <span class="text_header">For Users</span>
                                 <span class="text_body ">
-                                    <b>«Все что сэкономлено – все заработано!»</b>
+                                    <b>“Everything saved is everything earned!”</b>
                                     <br><br>
-                                    Каждый день мы совершаем множество покупок, и конечно, всегда хочется, чтобы они были максимально выгодными. Наш сервис предоставляет возможность совершать покупки по самой выгодной цене, объединяя сотни организаций и предлагая эксклюзивные предложения, акции и скидки. Экономьте на повседневных покупках и наслаждайтесь выгодой на каждом шагу!
+                                    Every day we make numerous purchases, and naturally, we always want them to be as cost-effective as possible. Our service provides the opportunity to shop at the most favorable prices, uniting hundreds of organizations and offering exclusive deals, promotions, and discounts. Save on everyday purchases and enjoy benefits at every step!
                                 </span>
-                                <a href="foruser.html"><div class="btn-type2">Подробнее</div></a>
+                                <a href="foruser.html"><div class="btn-type2">Learn More</div></a>
                             </div>
                         </div>
-                        <div class="forPartners "  data-aos="fade-left">
+                        <div class="forPartners " data-aos="fade-left">
                             <div class="text left_line">
-                                <span class="text_header">Партнерам</span>
+                                <span class="text_header">For Partners</span>
                                 <span class="text_body ">
-                                    Nadis предлагает вашему бизнесу современный инструмент для эффективного взаимодействия с клиентами. Это надежное решение в сфере коммуникаций и продвижения, позволяющее оперативно информировать покупателей о специальных предложениях, новых товарах и услугах. Сервис обеспечивает удобный доступ к контактной информации и упрощает процесс общения, повышая лояльность аудитории и усиливая вовлеченность потребителей.
+                                    Nadis offers your business a modern tool for effective customer interaction. It is a reliable solution in communication and promotion, enabling prompt notification of customers about special offers, new products, and services. The service provides convenient access to contact information and simplifies the communication process, increasing audience loyalty and enhancing consumer engagement.
                                 </span>
-                                <a href="forcompany.html"><div class="btn-type2">Подробнее</div></a>
+                                <a href="forcompany.html"><div class="btn-type2">Learn More</div></a>
                             </div>
                             <div class="photo">
                                 <img src="img/img2.png" alt="">
                             </div>
                         </div>
-                        <div class="forEntrepreneurs"  data-aos="fade-right">
+                        <div class="forEntrepreneurs" data-aos="fade-right">
                             <div class="photo">
                                 <img src="img/img3.png" alt="">
                             </div>
                             <div class="text right_line">
-                                <span class="text_header">Ассоциация предпринимателей</span>
+                                <span class="text_header">Entrepreneurs Association</span>
                                 <span class="text_body ">
-                                    Каждый собственник бизнеса задумывается о развитии и защите своего дела. В условиях конкуренции важны новые знания, поддержка и деловое окружение. Иногда нужны советы от опытных специалистов или общение с предпринимателями, которые понимают ваши вызовы. Наш сервис помогает находить необходимые ресурсы, идеи и решения, а также расширять сеть профессиональных контактов для успешного развития бизнеса.
+                                    Every business owner thinks about growth and protection of their business. In a competitive environment, new knowledge, support, and a professional network are crucial. Sometimes advice from experienced professionals or communication with entrepreneurs who understand your challenges is needed. Our service helps find the necessary resources, ideas, and solutions, as well as expand your professional network for successful business development.
                                 </span>
-                                <a href="association.html"><div class="btn-type2">Подробнее</div></a>
+                                <a href="association.html"><div class="btn-type2">Learn More</div></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bonus"  data-aos="fade-down">
+        <div class="bonus" data-aos="fade-down">
             <div class="container">
                 <div class="bonus_content" style="margin-top: 50px;">
                     <img class="bonus_imgBg" src="img/dots.png" alt="" class="img_bg">
                     <div class="bonus_flex">
                         <img src="img/image_4.png" alt="">
                         <div class="bonus_right">
-                            <h3 class="bonus_header">Важная информация</h3>
-                            <span class="bonus_text">Просим быть внимательными и осторожными. В связи с участившимися случаями мошеннических действий уведомляем Вас, что сотрудники ЧК "Nadis Group Limited" не высылают текстовые сообщения и письма на электронную почту, не обзванивают пользователей и партнеров Nadis с просьбой предоставить какие-либо данные, в том числе данные о сумме баланса в Nadis, историях заказов и/или покупок, паспортные данные и данные банковских счетов. Все необходимые данные заполняются/редактируются пользователями только в мобильном приложении Nadis самостоятельно.</span>
+                            <h3 class="bonus_header">Important Information</h3>
+                            <span class="bonus_text">Please be cautious and attentive. Due to the increasing cases of fraudulent activities, we inform you that employees of Nadis Group Limited do not send text messages or emails, nor do they call users and partners of Nadis requesting any data, including information about the balance in Nadis, order or purchase history, passport details, or bank account information. All necessary data is filled in/edited by users independently in the Nadis mobile application.</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="faq">
             <div class="container">
-                <h2 class="title">Часто задаваемые вопросы</h2>
-                <div class="informAccordion ">
+                <h2 class="title">Frequently Asked Questions</h2>
+                <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Из чего состоит основной контент Nadis?</span>
+                            <span class="informName greyColor">What does the main content of Nadis consist of?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -401,13 +357,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Публикации, сторис, товары, услуги, вакансии, страницы магазинов, горячие предложения, скидки и баннеры.</span>
+                        <span>Publications, stories, products, services, vacancies, store pages, hot offers, discounts, and banners.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Где можно скачать мобильное приложение Nadis?</span>
+                            <span class="informName greyColor">Where can I download the Nadis mobile app?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -416,13 +372,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Приложение доступно в App Store и Play Market.</span>
+                        <span>The app is available on the App Store and Play Market.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Чем отличается Nadis от других приложений?</span>
+                            <span class="informName greyColor">How is Nadis different from other apps?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -431,13 +387,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Nadis является привычным маркетплейсом, однако мы добавили ленту новостей и сторис, предлагаем партнёрам выгодные условия, а пользователям — кэшбэк за рекомендации.</span>
+                        <span>Nadis is a familiar marketplace, but we’ve added a news feed and stories, offer favorable terms for partners, and cashback for user recommendations.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">NADIS только в Казахстане?</span>
+                            <span class="informName greyColor">Is NADIS only in Kazakhstan?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -446,13 +402,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Да, но мы планируем расширение после укрепления позиций на внутреннем рынке.</span>
+                        <span>Yes, but we plan to expand after strengthening our position in the domestic market.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Могу ли я стать частью команды Nadis?</span>
+                            <span class="informName greyColor">Can I become part of the Nadis team?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -461,13 +417,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Если ты уверенный, харизматичный и продвинутый в профессиональном плане человек, то конечно - Да! Отправляй резюме на наш электронный адрес или оставляй отклик на доступные вакансии.</span>
+                        <span>If you are a confident, charismatic, and professionally advanced individual, then of course - Yes! Send your resume to our email or apply for available vacancies.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Имеется ли официальная регистрация в Казахстане?</span>
+                            <span class="informName greyColor">Is there an official registration in Kazakhstan?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -476,13 +432,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Да. Nadis зарегистрирован в юрисдикции МЦФА как Частная компания «Nadis Group Limited».</span>
+                        <span>Yes. Nadis is registered in the AIFC jurisdiction as a Private Company “Nadis Group Limited”.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Могу ли я предложить свои идеи для развития?</span>
+                            <span class="informName greyColor">Can I suggest ideas for development?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -491,13 +447,13 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Конечно! Мы открыты к предложениям — напишите нам.</span>
+                        <span>Of course! We are open to suggestions — write to us.</span>
                     </div>
                 </div>
                 <div class="informAccordion">
                     <div class="informItem">
                         <div class="informAtr">
-                            <span class="informName greyColor">Есть ли версия для компьютера?</span>
+                            <span class="informName greyColor">Is there a desktop version?</span>
                         </div>
                         <div class="informAtr">
                             <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,13 +462,11 @@
                         </div>
                     </div>
                     <div class="disclosure" style="display: none;">
-                        <span>Нет. Nadis работает только на мобильных устройствах.</span>
+                        <span>No. Nadis works only on mobile devices.</span>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="map" data-aos="zoom-in">
             <svg width="1000" height="479" viewBox="0 0 1000 479" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_548_1645)">
@@ -7401,43 +7355,39 @@
                 
                 
         </div>
-
         <div class="footer">
             <div class="container">
                 <div class="wrapper">
                     <div class="left_block">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="index_en.html">
                                 <img src="img/real.svg" alt="">
                                 <span>Nadis</span>
                             </a>
                         </div>
-                        <span class="age">ЧК «Nadis Group Limited»</span>
-                        <span class="age">© Все права защищинеы</span>
-                        <a href="politic.html"><span class="politic">Политика конфиденциальности</span></a>
-                        <a href="delete.html" class="delete_acc" style="   display: block;
-                                                        text-decoration: underline;
-                                                        color: #7e7e7e;
-                                                        padding-top: 5px;">Удалить аккаунт</a>
+                        <span class="age">LLC "Nadis Group Limited"</span>
+                        <span class="age">© All rights reserved</span>
+                        <a href="politic.html"><span class="politic">Privacy Policy</span></a>
+                        <a href="delete.html" class="delete_acc" style="display: block; text-decoration: underline; color: #7e7e7e; padding-top: 5px;">Delete Account</a>
                     </div>
                     <div class="center_block">
-                                <ul>
-                                    <a href="about.html" class="hover_title">
-                                        <li>О компании</li>
-                                    </a>
-                                    <a href="foruser.html" class="hover_title">
-                                        <li>Пользователям</li>
-                                    </a>
-                                    <a href="forcompany.html" class="hover_title">
-                                        <li>Партнерам</li>
-                                    </a>
-                                    <a href="association.html" class="hover_title">
-                                        <li>Ассоциация предпринимателей</li>
-                                    </a>
-                                </ul>
+                        <ul>
+                            <a href="about_en.html" class="hover_title">
+                                <li>About the Company</li>
+                            </a>
+                            <a href="foruser_en.html" class="hover_title">
+                                <li>For Users</li>
+                            </a>
+                            <a href="forcompany_en.html" class="hover_title">
+                                <li>For Partners</li>
+                            </a>
+                            <a href="association_en.html" class="hover_title">
+                                <li>Entrepreneurs Association</li>
+                            </a>
+                        </ul>
                     </div>
                     <div class="right_block">
-                        Скачать приложение:
+                        Download app:
                         <img style="width: 125px;" src="img/Mobile app store badge.svg" alt="">
                         <img style="width: 125px;" src="img/Mobile app store badge_2.svg" alt="">
                     </div>
@@ -7450,7 +7400,7 @@
                             <path d="M6.37075 11.5987L19.098 18.8715C19.3727 19.0284 19.6836 19.111 20 19.111C20.3164 19.111 20.6273 19.0284 20.902 18.8715L33.6293 11.5987C34.0425 11.3567 34.3436 10.9615 34.4671 10.4989C34.5906 10.0362 34.5267 9.5435 34.2891 9.12774C34.0515 8.71197 33.6595 8.40671 33.1982 8.27825C32.7369 8.14979 32.2436 8.2085 31.8253 8.44163L20 15.1995L8.17475 8.44163C7.96731 8.32015 7.73783 8.241 7.4996 8.20879C7.26137 8.17657 7.01912 8.19191 6.78686 8.25393C6.5546 8.31595 6.33695 8.42341 6.14649 8.5701C5.95603 8.71679 5.79656 8.89979 5.67729 9.10851C5.55802 9.31724 5.48133 9.54754 5.45165 9.7861C5.42197 10.0247 5.4399 10.2667 5.50439 10.4983C5.56888 10.7299 5.67866 10.9464 5.82737 11.1353C5.97607 11.3242 6.16076 11.4817 6.37075 11.5987Z" fill="#565656"/>
                         </svg>                            
                     </a>
-                    <a href="tel.:77779851943" class="whatsapp">
+                    <a href="tel:77779851943" class="whatsapp">
                         <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M34.1733 6.19145C30.5685 2.60334 25.5888 0.383789 20.0878 0.383789C9.08707 0.383789 0.16751 9.26067 0.16751 20.2117C0.16751 23.8558 1.15515 27.2692 2.87715 30.2037L2.82623 30.1103L0 40.3838L10.5585 37.6267C13.307 39.146 16.5862 40.0397 20.0757 40.0397H20.0838C31.0845 40.0357 40 31.1574 40 20.2077C40 14.7349 37.7728 9.78088 34.172 6.19278L34.1733 6.19145ZM20.0838 36.6903H20.0771C16.9694 36.6903 14.0601 35.8366 11.5769 34.352L11.652 34.3934L11.0476 34.0373L4.78274 35.6739L6.45382 29.5928L6.05984 28.9699C4.47184 26.4862 3.52843 23.4597 3.52843 20.2131C3.52843 11.1134 10.9404 3.7358 20.0824 3.7358C29.2244 3.7358 36.6364 11.1134 36.6364 20.2131C36.6364 29.3127 29.2271 36.6903 20.0838 36.6903ZM29.1641 24.3507C28.667 24.1026 26.22 22.9061 25.7643 22.7394C25.3074 22.574 24.975 22.4926 24.6427 22.9888C24.313 23.4837 23.3589 24.5988 23.0681 24.9296C22.7787 25.2617 22.4865 25.3018 21.9893 25.055C20.4483 24.4334 19.1243 23.6051 17.9731 22.5847L17.9865 22.5967C16.9158 21.6096 15.9979 20.4798 15.2568 19.234L15.2193 19.1646C14.9298 18.6698 15.1884 18.4017 15.4364 18.1549C15.6602 17.9335 15.9349 17.576 16.1828 17.2879C16.3784 17.0491 16.5459 16.7757 16.6733 16.4822L16.6813 16.4596C16.7389 16.3435 16.7724 16.2088 16.7724 16.0647C16.7724 15.89 16.7228 15.7273 16.6371 15.5885L16.6398 15.5925C16.5138 15.3444 15.5194 12.9061 15.1054 11.9137C14.7007 10.948 14.2893 11.0801 13.9851 11.0641C13.6956 11.0507 13.3633 11.0481 13.0309 11.0481C12.5016 11.0614 12.0312 11.2988 11.7069 11.6656L11.7056 11.6683C10.6308 12.6834 9.96348 14.1146 9.96348 15.7006C9.96348 15.7353 9.96348 15.7713 9.96482 15.806V15.8006C10.1404 17.7574 10.8774 19.5141 12.0111 20.9453L11.995 20.9253C14.1445 24.0986 17.0096 26.637 20.3719 28.347L20.4978 28.4043C21.2322 28.7351 22.1729 29.0886 23.1351 29.3914L23.3348 29.4461C23.9271 29.6328 24.6092 29.7409 25.3168 29.7409C25.7228 29.7409 26.1222 29.7049 26.5081 29.6368L26.4665 29.6422C27.8991 29.3447 29.0877 28.4844 29.8127 27.3092L29.8248 27.2866C30.0459 26.7984 30.1745 26.2288 30.1745 25.6299C30.1745 25.3831 30.1531 25.1417 30.1116 24.9069L30.1156 24.9323C29.9923 24.7255 29.66 24.6028 29.1614 24.3534L29.1641 24.3507Z" fill="#565656"/>
                         </svg>    
@@ -7463,11 +7413,11 @@
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
 </html>
